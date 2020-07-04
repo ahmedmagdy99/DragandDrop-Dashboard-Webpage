@@ -17,6 +17,7 @@ function myFunction2() {
 //Clear all saved local storage
 function fun() {
     localStorage.clear();
+    location.reload();
 }
 
 //Effects for Dragover and DragLeave
