@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/2b27003f5d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!--Navbar Start-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <a class="navbar-brand" href="#">dashbang</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Ahmed Magdy
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--Navbar End-->
+  <div class="title">
+    <h4 style="display: inline;">Ahmed's Analytics Dashboard</h4><i class="fas fa-pencil-alt"></i>
+  </div>
+
+  <div class="row" id="main">
+    <div class="col-md-3 sidebar">
+      <div class="container">
+        <button class="btn btn-lg btn-outline-dark btn-block mb-2">
+          + New Widget
+        </button>
+      </div>
+      <div class="paddpic" id="box1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="images/chart 1.png" draggable="true" id="element1" draggable="true" ondragstart="drag(event)" alt="">
+      </div>
+      <div class="paddpic" id="box2" draggable="true" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="images/chart 2.png" draggable="true" id="element2" draggable="true" ondragstart="drag(event)" alt="">
+      </div>
+      <div class="paddpic" id="box3" draggable="true" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="images/chart 3.png" draggable="true" id="element3" draggable="true" ondragstart="drag(event)" alt="">
+      </div>
+    </div>
+    <div class="col-md-9 dashboard">
+      <h5 class="dashTitle m-0">Drag a widget into an open dashboard slot</h5>
+      <span class="warnMess">(you should press Save My Layout button under after you finish to save your layout and be
+        able to see it when you open again)</span>
+      <div class="buttons ml-auto mb-3 mt-3">
+        <button class="btn btn-primary" onclick="myFunction()">Save My Layout</button>
+        <button class="btn ml-3 btn-dark" onclick="myFunction2()">Show My Last Layout</button>
+      </div>
+      <div class="row">
+        <div class="col-md-6" id="first">
+          <div class="empty" id="dest1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="empty" id="dest2" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+        </div>
+      </div>
+      <div class="row" style="padding-top: 50px;">
+        <div class="col-md-6">
+          <div class="empty" id="dest3" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="empty" id="dest4" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <!-- <i class="fas fa-plus-circle"></i> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/popper.min_2.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
