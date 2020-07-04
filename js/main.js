@@ -14,6 +14,10 @@ function myFunction2() {
     }
     document.getElementById("main").innerHTML = localStorage.new;
 }
+//Clear all saved local storage
+function fun() {
+    localStorage.clear();
+}
 
 //Effects for Dragover and DragLeave
 const empties = document.querySelectorAll(".empty");
