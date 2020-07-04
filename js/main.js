@@ -8,6 +8,10 @@ function myFunction() {
 }
 //Retrieve The Layout Saved From The Button By Clicking on Show My Last Layout Button
 function myFunction2() {
+    if (Object.keys(localStorage).length === 0) {
+        alert('There is no previous layout!');
+        return;
+    }
     document.getElementById("main").innerHTML = localStorage.new;
 }
 
