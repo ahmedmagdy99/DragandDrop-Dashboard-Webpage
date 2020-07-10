@@ -1,4 +1,6 @@
+
 //Save The Layout By Clicking on Save My Layout Button
+/*
 function myFunction() {
     if (localStorage) { // Browser supports it
         localStorage.new = document.getElementById("main").innerHTML;
@@ -14,6 +16,7 @@ function myFunction2() {
     }
     document.getElementById("main").innerHTML = localStorage.new;
 }
+*/
 //Clear all saved local storage
 function fun() {
     localStorage.clear();
@@ -29,11 +32,19 @@ for (const empty of empties) {
 
 function dragEnter(e) {
     e.preventDefault();
-    this.className += ' hovered';
+    if (this.classList.contains("hovered")) {
+
+    } else {
+        this.className += ' hovered';
+    }
 }
 
 function dragLeave() {
-    this.className = 'empty';
+    if (this.classList.contains("hovered")) {
+
+    } else {
+        this.className = 'grid-stack-item-content empty';
+    }
 }
 
 // Drag and Drop
